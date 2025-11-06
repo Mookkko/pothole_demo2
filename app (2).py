@@ -22,6 +22,10 @@ if uploaded_image is not None:
     # 5️⃣ รัน YOLO inference
     st.info("Running YOLO detection...")
     results = model.predict(image_np, conf=0.4)
+    # ✅ เพิ่มส่วนนี้เพื่อตรวจ
+    st.write("🧠 Model class names:", model.names)
+    st.write("📦 Detected boxes:", results[0].boxes)
+    st.write("📊 Detection probabilities:", results[0].probs)
 
     # 6️⃣ แสดงภาพผลลัพธ์
     result_image = results[0].plot()[:, :, ::-1]  # convert BGR→RGB
