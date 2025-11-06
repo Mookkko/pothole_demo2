@@ -6,7 +6,7 @@ import numpy as np
 st.title("YOLOv11 Pothole Detection App 🚧") 
 
 # 1️⃣ โหลดโมเดล (ที่เทรนแล้ว)
-model = YOLO("runs/detect/train6/weights/best.pt")  # path ของ best.pt
+model = YOLO("yolo11n.pt") 
 
 # 2️⃣ อัปโหลดรูปภาพ
 uploaded_image = st.file_uploader("Upload an image (jpg, png)", type=["jpg", "jpeg", "png"])
